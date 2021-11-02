@@ -1,0 +1,135 @@
+<!-- <p>upload works!</p> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img
+                src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+                alt="logo" class="logo" loading="lazy"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto font-weight-bold small">
+                <li class="nav-item  ">
+                    <h3><a class="nav-link active h5" aria-current="page" href="#"  routerLink="/start">Back</a></h3>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <h3><a class="nav-link h5" href="#" routerLink="/home"></a></h3>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="logo" ><img
+        src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+        alt="KAAR" class="img"></div>
+
+    <div class="nav-links">
+        <!-- <li class="h5"><a routerLink="/products">Edit_Profile</a></li> -->
+      <!-- <li><a href="#"></a></li> -->
+      <li class="h5"><a href="#" routerLink="/start">Back</a></li>
+      <!-- <li class="h5"><a href="#" routerLink="/home">Home</a></li> -->
+      <!-- <li><a href="#"></a></li> -->
+      <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/signin" style="color: #fff;">Logout</a></button></li>
+      <!-- <li class="h5"><a href="#" routerLink="/home">Home</a></li> -->
+    </div>
+
+  </nav>
+<div></div>
+<div class="main--bgc pb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+        <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+    </svg>
+    
+<div class="mainContainer">
+    <div class="content">
+        <h1 class="title h5" style="color: #fa9209;font-weight: 600;"> Customer Master Data Upload</h1>
+        <img src="assets/md.jpg" alt="" class="ab">
+        <div class="center">
+            <h2 class="h5"><p style="color: #597FE2;text-decoration: underline;">Simple steps to upload customer data :</p></h2>
+            <ul class="h5">
+                <li>=> Upload file in excel format</li>
+                <li>=> Wait few seconds for the file to be processed</li>
+                <li>=> Check the newly created customer. </li>
+            </ul>
+            
+        </div>
+        <div id="p1">
+        <div class="row margin25">
+
+
+            <div class="col-md-4">
+                <!-- <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx"> -->
+                <button type="button" class="btn btn-info" (click)="Upload2()" style="margin-bottom: -50px;margin-left: 10%;" *ngIf="def">Upload</button>
+
+                <input type="file" style="display: inline-block;margin-right: 5%;margin-left: 45%;" (change)="incomingfile($event)" placeholder="Upload the file here" accept=".xlsx">
+            </div>
+            <div *ngIf="act" class="h5" style="margin-top: 25px;color: blue;font-weight: 400;">NEWLY GENERATED CUSTOMER NUMBER IS <button style="font-weight: 600;background-color: coral;border: 5px solid white;color:white;border-radius: 20px;">{{dataUpload[0].Cutomerno}}</button></div>
+           <div *ngIf="act" class="h5" style="margin-top: 15px;text-align: center;color: forestgreen;font-weight: 500;">
+           <!-- <button (click)="clickMe()">{{data}}</button> -->
+           <table class="table table-bordered table-responsive total " style="margin-left: -40%;">
+               <thead style="background-color: forestgreen;">
+                   <tr style="color: #fff;">
+                       <th>FIRST NAME</th>
+                       <TH>LAST NAME</TH>
+                       <th>STREET</th>
+                       <th>TELEPHONE</th>
+                       <th>COUNTRY</th>
+                       <th>POSTAL_CODE</th>
+                       <th>REF_CUSTOMER</th>
+                       <th>DIST_CHANNEL</th>
+                       <th>DIVISION</th>
+                       <th>LANGUAGE</th>
+                   </tr>
+               </thead>
+               <tbody class="table-active start">
+                   <tr>
+                       <td>VEDA</td>
+                       <TD>VYAS</TD>
+                       <td>ABC</td>
+                       <td>9182043268</td>
+                       <td>IN</td>
+                       <td>600001</td>
+                       <td>6000023</td>
+                       <td>S1</td>
+                       <td>S1</td>
+                       <td>E</td>
+                   </tr>
+                   <!-- <TR>
+                       <TD>MITHRAN</TD>
+                       <TD>BALA</TD>
+                       <td>ABC</td>
+                       <td>9653245679</td>
+                       <td>IN</td>
+                       <td>600001</td>
+                       <td>6000023</td>
+                       <td>S1</td>
+                       <td>S1</td>
+                       <td>E</td>
+                   </TR> -->
+               </tbody>
+           </table>
+
+           * Data uploaded successfully</div>
+           
+        </div>
+        </div>
+    </div>
+</div>

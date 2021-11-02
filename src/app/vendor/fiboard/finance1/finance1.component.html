@@ -1,0 +1,61 @@
+<!-- <p>finance1 works!</p> -->
+<!-- <p>component works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="logo"><img class="img"
+      src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+      alt="KAAR"></div>
+
+  <div class="nav-links">
+    <li class="h5"><a routerLink="/fiboard/fi1" routerLinkActive='active'>Invoice</a></li>
+    <li class="h5"><a routerLink="/fiboard/fi2" routerLinkActive='active'>Payage</a></li>
+    <li class="h5"><a routerLink="/fiboard/fi3" routerLinkActive='active'>Credit/Debit memo</a></li>
+    <li class="h5"><a routerLink="/vendorboard">Back</a></li>
+    <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/vendor" style="color: #fff;">Logout</a></button></li>
+  </div>
+
+</nav>
+<div></div>
+<div class="main--bgc pb-5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+    <path fill="#f8f9fa" fill-opacity="1"
+      d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+    </path>
+  </svg>
+
+
+  <div id="default" class="total" >
+    <!-- <h1 class="mb-4" style="color: #597FE2;text-decoration: underline;">Vendor Dashboard</h1> -->
+    <div style="margin-left: 28%;margin-right: 20%;margin-top: 20px;margin-bottom: 45px;border: 2px solid #4181ee;width: 44%;height: 60%;"><img src="assets/vend.jpg" alt=""></div>
+    <ul>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">Invoice details</p>
+        <p style="margin-left: 12%;margin-right: 12%;">Once goods are procured from a vendor and placed in company's premises through 
+            goods receipt, we need to pay to the vendor for the acquired goods and services. The 
+            amount to be paid along with the details of the material is provided by the vendor in 
+            the form of a document that is known as the invoice.</p>
+      </li>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">Payments and Aging</p>
+        <p style="margin-left: 12%;margin-right: 12%;">The Vendor aging report displays the balances that are due to vendors, sorted by
+            date interval or by aging period definition.</p>
+      </li>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">Credit/Debit memo</p>
+        <p style="margin-left: 12%;margin-right: 12%;">A debit memo is a transaction that reduces Amounts Payable to a vendor.A transaction that reduces Amounts Receivable from a customer is a credit memo.</p>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- <div id="inquiry" *ngIf="inquiry" style="text-align:center">
+    <p>inquiry data goes here........</p>
+  </div>
+  <div id="salesorderdata" *ngIf="salesorderdata" style="text-align:center">
+    <p>sales order data goes here....</p>
+  </div>
+  <div id="listofdelivery" *ngIf="listofdelivery" style="text-align:center">
+    <p>list of delivery data goes here.....</p>
+  </div> -->
+

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+.main--bgc {
+  background-color: #eef1fc;
+}
+li{
+  list-style: none;
+}
+.total {
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  font-weight: 300;
+  overflow-x: hidden;
+  background: rgba(255, 255, 255, 0.45);
+  background-color: #EEF1FC;
+  text-align: center;
+}
+
+/* @media (min-width: 992px) {
+  .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #597FE2;
+    margin: 0 auto;
+    -webkit-transition: width .1s;
+    transition: width .1s;
+  }
+
+  .nav-link:hover::after {
+    width: 40%;
+  }
+} */
+a {
+  text-decoration: none;
+}
+
+.img {
+      width: 150px !important;
+  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+  
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 37px;
+  letter-spacing: 0.075em;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li a {
+  padding: 0 1.5rem;
+  font-weight: bold;
+  color: #13274F;
+  opacity: 0.6;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #597FE2;
+  width: 50%;
+  padding-bottom: 0.5rem;
+  opacity: 1;
+}
+@media(max-width: 480px) {
+
+.navbar .logo {
+font-weight: bold;
+font-size: 3rem;
+}
+
+.nav-links {
+flex-direction: column;
+}
+
+.nav-links li a {
+margin: 1rem 0;
+}
+
+.nav-links li a:hover {
+border-bottom: 1px solid #597FE2;
+width: 50%;
+padding-bottom: 0.1rem;
+opacity: 1;
+}
+}
+@media(max-width: 540px) {
+
+.navbar .logo {
+font-weight: bold;
+font-size: 3rem;
+}
+
+.nav-links li a {
+justify-content: space-between;
+color: #13274F;
+opacity: 0.6;
+padding: 0 1rem;
+font-size: 0.7rem;
+}
+}
+@media(max-width: 625px) {
+
+.navbar .logo {
+font-weight: bold;
+font-size: 3rem;
+}
+
+.nav-links li a {
+justify-content: space-between;
+color: #13274F;
+opacity: 0.6;
+padding: 0 1rem;
+font-size: 0.8rem;
+}
+}
+@media(max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .logo {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+  }
+
+  .nav-links li a {
+    justify-content: space-between;
+    color: #13274F;
+    opacity: 0.6;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+}
+ 
+
+
+.body{
+  height: 110vh;
+  width: 70%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: -26%;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 700px;
+  width: 80%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+button:hover{
+  background-color: rgb(248, 106, 40);
+}
+.content form .user-details{
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  /* text-align: center; */
+  padding-left: 45px;
+  border: 2px solid brown;
+  padding-top: 15px;
+  /* height: 160px; */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+form .input-box div.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+ .item{
+     border:2px solid #9b59b6 ;
+     padding: 5px;
+     border-radius: 10px;
+     display: inline;
+     /* margin-bottom: 10px; */
+ }
+ .start{
+   overflow: hidden;
+   height: 400px;
+   /* color: #fff; */
+   width: 30%;
+   float: left;
+   overflow-y: scroll;
+   overflow-x: scroll;
+ }
+   /* #start1{
+   width: 50%;
+   margin-right: 35%;
+ }  */
+ .para{
+     margin-top: 35px;
+     margin-bottom: 3px;
+ }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}

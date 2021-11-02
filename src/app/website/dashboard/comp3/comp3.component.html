@@ -1,0 +1,132 @@
+<!-- <p>comp3 works!</p> -->
+<!-- <p>deliver works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<table class="table  table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th></th>
+            <!--<th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th> -->
+        </tr>
+    </thead>
+    <tbody class="table-active start">
+        <tr class="bg-info" style="color:#fff;">
+            <td></td>
+            <td>CUSTOMER_ID</td>
+            <td>SALES_DOC_NO:</td>
+            <td>ORG NAME</td>
+            <td>DELIVERY DATE</td>
+            <td>TIME</td>
+            <td>DESCRIPTION</td>
+            <td>AMOUNT BAL:</td>
+        </tr>
+        <tr *ngFor="let item of deliveryList | slice:1">
+            <td><button class="btn btn-primary" (click)="clickHere(item.VBELN)">VIEW</button></td>
+            <td>{{item.KUNNR}}</td>
+            <td>{{item.VBELN}}</td>
+            <td>{{item.ERNAM}}</td>
+            <td>{{item.FKDAT}}</td>
+            <td>{{item.ERZET}}</td>
+            <td>{{item.INCO2}}</td>
+            <td>{{item.AMTBL}}</td>
+        </tr>
+        <!-- <tr *ngFor="let item of deliveryFetch ">
+            <td><button class="btn btn-primary" (click)="clickHere(item.VBELN)">VIEW</button></td>
+            <td *ngIf="default">{{item.VKORG}}</td>
+            <td *ngIf="default">{{item.VBELN}}</td>
+            <td *ngIf="default">{{item.KUNNR}}</td>
+            <td *ngIf="default">{{item.ERNAM}}</td>
+            <td *ngIf="default">{{item.ERDAT}}</td>
+            <td *ngIf="default">{{item.EXNUM}}</td>
+            <td *ngIf="default">{{item.AMTBL}}</td>
+            <td *ngIf="default">{{item.TZONRC}}</td>
+        </tr> -->
+    </tbody>
+</table>
+<div class="body h5" *ngIf="text" style="color: #fff;font-size: 45px;font-weight: 600;text-align: center;">Once u click on the view button u will get all the necessary details about the customer's info.</div>
+<div *ngIf="activate1">
+    <!-- <p>{{testing1[1].SHORT_TEXT}}</p> -->
+
+    <div class="body">
+        <div class="container">
+            <div>
+                <img src="https://www.kaartech.com/wp-content/themes/kaar/images/logo.png" alt="" />
+            </div>
+            <div class="title" style="margin-bottom: 8px;">DELIVERY DETAILS</div>
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Sender :</div>
+                <div style="display: inline;">
+                    {{deliveryFetch[1].ERNAM}}
+                </div> 
+            </div>
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Document number :</div>
+                <div style="display: inline;">{{deliveryFetch[1].VBELN}}</div>
+            </div>
+            <div class="para">
+                I would like to place an delivery for {{deliveryFetch[1].EXNUM}}​​​​​ from the customer-id {{deliveryFetch[1].KUNNR}}​​​​​. The expected target quantity is {{deliveryFetch[1].BTGEW}}​​​​​KG from the {{deliveryFetch[1].TRAGR}}​​​​​ transportation group. Additional details regarding
+                the requested item is provided below...
+            </div>
+            <div class="content">
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <div class="details">
+                                Sales_Doc n0 :
+                                <div class="item">
+                                    {{deliveryFetch[1].VBELN}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                INCO2 :
+                                <div class="item">
+                                    {{deliveryFetch[1].INCO2}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                DELIVERY_NUM :
+                                <div class="item">{{deliveryFetch[1].KALSM}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Net weight :
+                                <div class="item">{{deliveryFetch[1].NTGEW}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Transportation group :
+                                <div class="item">{{deliveryFetch[1].TRAGR}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Amount :
+                                <div class="item">{{deliveryFetch[1].AMTBL}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gender-details" style="margin-left: 65%; margin-top: 25px;">
+                        <div class="gender-title">
+                            <h4>Yours sincerely</h4>
+                            <h3 style="font-weight: 500;">{{deliveryFetch[1].ERNAM}}​​​​​</h3>
+                            <h3 style="margin-top: -13px;">signature</h3>
+                        </div>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>

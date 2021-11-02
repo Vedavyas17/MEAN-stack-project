@@ -1,0 +1,59 @@
+<!-- <p>crediting works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="logo"><img class="img"
+            src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+            alt="KAAR"></div>
+      
+        <div class="nav-links">
+          <li class="h5"><a routerLink="/invoice" routerLinkActive='active'>Invoice</a></li>
+          <li class="h5"><a routerLink="/payage" routerLinkActive='active'>Payage</a></li>
+          <!-- <li class="h5"><a routerLink="/mmboard/com3" routerLinkActive='active'></a></li> -->
+          <li class="h5"><a routerLink="/finance">Back</a></li>
+          <li class="h5"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/vendor" style="color: #fff;">Logout</a></button></li>
+        </div>
+      
+      </nav>
+      <div></div>
+      <div class="main--bgc pb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+          <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+          </path>
+        </svg>
+      </div>
+      
+<table class="table table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th>DOCUMENT-NO</th>
+            <!-- <th>MANDT</th> -->
+            <th>MATERIAL-NO</th>
+            <th>MEASURING UNIT</th>
+            <th>ENTRY UNIT</th>
+            <th>QUANTITY</th>
+            <th>COMP_CODE</th>
+            <th>CUSTOMER</th>
+            <th>STATUS</th>
+            <th>AREA/LOCATION</th>
+        </tr>
+    </thead>
+    <tbody class="table-active">
+        <tr *ngFor="let item of creditMemo">
+            <td>{{item.BELNR}}</td>
+            <!-- <td>{{item.MANDT}}</td> -->
+            <td>{{item.MATNR}}</td>
+            <td>{{item.MEINS}}</td>
+            <td>{{item.ERFME}}</td>
+            <td>{{item.ERFMG}}</td>
+            <td>{{item.BUKRS}}</td>
+            <td>{{item.KUNNR}}</td>
+            <td>{{item.KOART}}</td>
+            <td>{{item.KOKRS}}</td>
+        </tr>
+    </tbody>
+</table>
+

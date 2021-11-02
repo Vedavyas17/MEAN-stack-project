@@ -1,0 +1,38 @@
+<p>comp4 works!</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<table class="table  table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th></th>
+            <th>VKORG</th>
+            <th>VBELN</th>
+            <th>KUNNR</th>
+            <th>ERNAM</th>
+            <th>ERDAT</th>
+            <th>EXNUM</th>
+            <th>AMTBL</th>
+            <th>TZONRC</th>
+        </tr>
+    </thead>
+    <tbody class="table-active">
+        <!-- <tr *ngFor="let item of deliveryList | slice:1">
+            <td>{{item.ERNAM}}</td>
+            <td>{{item.FKDAT}}</td>
+            <td>{{item.ERZET}}</td>
+            <td>{{item.INCO1}}</td>
+            <td>{{item.INCO2}}</td>
+        </tr> -->
+        <tr *ngFor="let item of inquiryFetch | slice:1">
+            <td><button class="btn btn-primary">VIEW</button></td>
+            <td>{{item.VKORG}}</td>
+            <td>{{item.VBELN}}</td>
+            <td>{{item.KUNNR}}</td>
+            <td>{{item.ERNAM}}</td>
+            <td>{{item.ERDAT}}</td>
+            <td>{{item.EXNUM}}</td>
+            <td>{{item.AMTBL}}</td>
+            <td>{{item.TZONRC}}</td>
+        </tr>
+    </tbody>
+</table>

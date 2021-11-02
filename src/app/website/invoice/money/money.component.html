@@ -1,0 +1,158 @@
+<!-- <p>money works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="logo"><img class="img"
+            src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+            alt="KAAR"></div>
+      
+        <div class="nav-links">
+          <li class="h5"><a routerLink="/payage" routerLinkActive='active'>Payage</a></li>
+          <li class="h5"><a routerLink="/credit" routerLinkActive='active'>Credit & Debit memo</a></li>
+          <!-- <li class="h5"><a routerLink="/mmboard/com3" routerLinkActive='active'></a></li> -->
+          <li class="h5"><a routerLink="/dashboard">Back</a></li>
+          <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/vendor" style="color: #fff;">Logout</a></button></li>
+        </div>
+      
+      </nav>
+      <div></div>
+      <div class="main--bgc pb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+          <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+          </path>
+        </svg>
+      </div>
+      
+
+    <table class="table table-bordered table-responsive total ">
+    <thead class="bg-info" id="start1">
+        <tr style="color: #fff;">
+            <th></th>
+            <!--<th>KUNNR</th>
+            <th>VBELN</th>
+            <th>VTWEG</th>
+            <th>VKORG</th> -->
+        </tr>
+    </thead>
+    <tbody class="table-active start" style="font-size: 18px;">
+        <tr class="bg-info" id="start1" style="color: #fff;">
+            <th></th>
+            <!-- <th>CUSTOMER_ID</th> -->
+            <th>SALES_DOC_NO</th>
+            <th>DISTRIBUTION CHANNEL</th>
+            <th>ORGANISATION</th>
+        </tr>
+        <tr *ngFor="let item of invoice" >
+            <td>
+                <button class="btn btn-primary" (click)="clickIt(item.VBELN)">
+                    VIEW
+                </button>
+            </td>
+            <!-- <td>
+                <div *ngIf="default">{{ item.KUNNR }}</div>
+            </td> -->
+            <td>
+                <div *ngIf="default">{{ item.VBELN }}</div>
+            </td>
+            <td>
+                <div *ngIf="default">{{ item.VTWEG }}</div>
+            </td>
+            <td>
+                <div *ngIf="default">{{ item.VKORG }}</div>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+<div class="body h5" *ngIf="text" style="color: #fff;font-size: 45px;font-weight: 600;text-align: center;">Once u click on the view button u will get all the necessary details about the customer's info.</div>
+<div *ngIf="activate2">
+    <!-- <p>{{testing1[1].SHORT_TEXT}}</p> -->
+
+    <div class="body">
+        <div class="container">
+            <div>
+                <img src="https://www.kaartech.com/wp-content/themes/kaar/images/logo.png" alt="" />
+            </div>
+            <div class="title" style="margin-bottom: 8px;">INVOICE DETAILS</div>
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Sender :</div>
+                <div style="display: inline;">
+                    {{invoice1[0].ERNAM}}
+                </div>
+            </div>
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Document number :</div>
+                <div style="display: inline;">{{invoice1[0].VBELN}}</div>
+            </div>
+            <div class="para">
+                The Invoice details for {{invoice1[0].POSNR}}​​​​​ of sales document {{invoice1[0].VBELN}} from the item category
+                {{invoice1[0].VGTYP}}​​​​​. The Net weight is {{invoice1[0].NTGEW}}​​​​​ with bill quantity
+                of {{invoice1[0].FKIMG}}​​​​​ . Additional details regarding
+                the requested item is provided below...
+            </div>
+            <div class="content">
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <div class="details">
+                                Category :
+                                <div class="item">
+                                    {{invoice1[0].MATNR}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Item_info :
+                                <div class="item">
+                                    {{invoice1[0].POSNR}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Bill quantity :
+                                <div class="item">{{invoice1[0].FKIMG}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Net weight :
+                                <div class="item">{{invoice1[0].NTGEW}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Grosss weight :
+                                <div class="item">{{invoice1[0].BRGEW}}</div>
+                                <div class="item" style="display: inline;">{{invoice1[0].GEWEI}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Net value :
+                                <div class="item">Rs.{{invoice1[0].NETWR}}/-</div>
+                            </div>
+                        </div>
+                        <!-- <div class="input-box">
+                            <div class="details">
+                                Total Amount :
+                                <div class="item">{{invoice1[0].WAVWK}}</div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="gender-details" style="margin-left: 65%; margin-top: 25px;">
+                        <div class="gender-title">
+                            <h4>Yours sincerely</h4>
+                            <h3 style="font-weight: 500;">{{invoice1[0].ARKTX}}​​​​​</h3>
+                            <h3 style="margin-top: -13px;">signature</h3>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

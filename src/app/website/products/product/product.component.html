@@ -1,0 +1,268 @@
+<!-- <p>product works!</p> -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    .container {
+        max-width: 700px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+    .abc{
+        background: #ff4584;
+        color: #fff;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        margin-left: 95%;
+        margin-top: -65%;
+        background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+    .abc:hover{
+        background: #0896ce;
+    }
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .container .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    .content form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+    }
+
+    form .input-box span.details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #9b59b6;
+    }
+
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+
+    form .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    form .category label .dot {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    #dot-1:checked~.category label .one,
+    #dot-2:checked~.category label .two,
+    #dot-3:checked~.category label .three {
+        background: #9b59b6;
+        border-color: #d9d9d9;
+    }
+
+    form input[type="radio"] {
+        display: none;
+    }
+
+    form .button {
+        height: 45px;
+        margin: 35px 0
+    }
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    form .button input:hover {
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+
+    @media(max-width: 584px) {
+        .container {
+            max-width: 100%;
+        }
+
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        form .category {
+            width: 100%;
+        }
+
+        .content form .user-details {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .user-details::-webkit-scrollbar {
+            width: 5px;
+        }
+    }
+
+    @media(max-width: 459px) {
+        .container .content .category {
+            flex-direction: column;
+        }
+    }
+</style>
+<div style="background-color: #eef1fc;"><button routerLink="/debit"style="padding:8px;border-radius:15px;font-size:18px;" class="abc">BACK</button></div>
+<div class="body">
+    
+    <div class="container">
+        <div><img src="https://www.kaartech.com/wp-content/themes/kaar/images/logo.png" alt=""></div>
+        <div class="title">Customer EDIT</div>
+        <div class="content" *ngIf="activate">
+            <form >
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">CUSTOMER_ID</span>
+                        <input type="text" id="cno">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">FIRST-NAME</span>
+                        <input type="text" id="name1">
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="details">LAST-NAME</span>
+                        <input type="text" id="name2">
+                    </div> -->
+                    <div class="input-box">
+                        <span class="details">STATE</span>
+                        <input type="text" id="state">
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="details"></span>
+                        <input type="text" id="channel">
+                    </div> -->
+                    <div class="input-box">
+                        <span class="details">REGION</span>
+                        <input type="text" id="reg">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">CITY</span>
+                        <input type="text" id="city">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">POSTAL CODE</span>
+                        <input type="text" id="pincode">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">ADDRESS</span>
+                        <input type="text" id="address">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">PHONE</span>
+                        <input type="text" id="phone">
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="details">PHONE2</span>
+                        <input type="text" id="tt">
+                    </div> -->
+                   
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <!-- <input type="radio" name="gender" id="dot-3"> -->
+                        <span class="gender-title">Organization</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Private</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Government</span>
+                            </label>
+                            
+                        </div>
+                    </div>
+                    <div class="button" (click)="onClick()">
+                        <input type="button" value="EDIT DETAILS" >
+                    </div>
+                    
+                </div>
+                <div *ngIf="act" style="color: forestgreen;font-weight: 500;font-style: italic;text-align: center;">* Upadated Successfully</div>
+            </form>
+        </div>
+    </div>
+</div>

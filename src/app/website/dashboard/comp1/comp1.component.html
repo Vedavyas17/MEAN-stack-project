@@ -1,0 +1,172 @@
+<!-- <p>comp1 works!</p> -->
+<!-- <p>enquire works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+<!-- <table class="table table-bordered table-responsive total ">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+            <th>col5</th>
+            <th>col6</th>
+            <th>col7</th>
+            <th>col8</th>
+        </tr>
+    </thead>
+    <tbody class="table-active">
+        <tr *ngFor="let item of enquireOrder | slice:1">
+            <td>{{item.SHORT_TEXT}}</td>
+            <td>{{item.MATERIAL}}</td>
+            <td>{{item.MATL_GROUP}}</td>
+            <td>{{item.ITM_NUMBER}}</td>
+            <td>{{item.ITEM_CATEG}}</td>
+            <td>{{item.CURRENCY}}</td>
+            <td>{{item.TARG_QTY_D}}</td>
+            <td>{{item.TARGET_QU}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<table class="table table-bordered table-responsive total ">
+    <thead class="bg-info" id="start1">
+        <tr style="color: #fff;">
+            <th></th>
+            <!-- <th>CUSTOMER_ID</th>
+            <th>SALES_DOC</th>
+            <th>DOC_CAREGORY</th> -->
+            <th></th>
+            <!-- <th></th> -->
+            <!-- <th></th> -->
+        </tr>
+    </thead>
+    <tbody class="table-active start">
+        <tr class="bg-info" style="color: #fff;">
+            <td></td>
+            <td>CUSTOMER_ID</td>
+            <td>SALES_DOC</td>
+            <td>DOC_CATEGORY</td>
+        </tr>
+        <tr *ngFor="let item of enquire" >
+            <td>
+                <button class="btn btn-primary" (click)="clickMe(item.VBELN)" >
+                    VIEW
+                </button>
+            </td>
+            <td>
+                <div *ngIf="default">{{ item.KUNNR }}</div>
+            </td>
+            <td>
+                <div *ngIf="default">{{ item.VBELN }}</div>
+            </td>
+            <td>
+                <div *ngIf="default">{{ item.VBTYP }}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="body h5" *ngIf="text" style="color: #fff;font-size: 45px;font-weight: 600;text-align: center;">Once u click on the view button u will get all the necessary details about the customer's info.</div>
+<div *ngIf="activate">
+    <!-- <p>{{testing1[1].SHORT_TEXT}}</p> -->
+
+    <div class="body">
+        <div class="container">
+            <div>
+                <img src="https://www.kaartech.com/wp-content/themes/kaar/images/logo.png" alt="" />
+            </div>
+            <div class="title" style="margin-bottom: 8px;">INQUIRY DETAILS</div>
+            <!-- <div style="right: 90%;"><h3>Date : </h3>{{testing[0].ERDAT}}</div> -->
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Sender :</div>
+                <div style="display: inline;">
+                    {{testing1[0].ERNAM}}
+                </div>
+            </div>
+            <div>
+                <div style="margin-top: 3px; font-weight: 600;">Document number :</div>
+                <div style="display: inline;">{{testing1[0].VBELN}}</div>
+            </div>
+            <div class="para">
+                I would like to place an inquiry for {{testing1[0].VBELN}}​​​​​ from the transaction group
+                {{testing1[0].TRVOG}}​​​​​. The Net value of the item,after any discounts and surchanges are taken into account is {{testing1[0].NETWR}}​​​​​ from
+                your {{testing1[0].VKORG}} sales organisation​​​​​ . Additional details regarding
+                the requested item is provided below...
+            </div>
+            <div class="content">
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <div class="details">
+                                CREATED BY :
+                                <div class="item">{{testing1[0].ERNAM}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                SALES ORGANISATION :
+                                <div class="item">
+                                    {{testing1[0].VKORG}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                Division :
+                                <div class="item">
+                                    {{testing1[0].SPART}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                DISTRIBUTION CHANNEL :
+                                <div class="item">{{testing1[0].VTWEG}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                COMPANY CODE :
+                                <div class="item">{{testing1[0].BUKRS_VF}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                SHIPPING CONDITION :
+                                <div class="item">{{testing1[0].VSBED}}</div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="details">
+                                NET VALUE :
+                                <div class="item">{{testing1[0].NETWR}}</div>
+                            </div>
+                        </div>
+                
+                        <div class="input-box">
+                            <div class="details">
+                                CURRENCY :
+                                <div class="item">{{testing1[0].WAERK}}</div>
+                            </div>
+                        </div>
+                
+                        <div class="input-box">
+                            <div class="details">
+                                BALANCE AMOUNT :
+                                <div class="item">{{testing1[0].AMTBL}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gender-details" style="margin-left: 65%; margin-top: 25px;">
+                        <div class="gender-title">
+                            <h4>Yours sincerely</h4>
+                            <h3 style="font-weight: 500;">{{enquire[0].KUNNR}}​​​​​</h3>
+                            <h3 style="margin-top: -13px;">signature</h3>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>

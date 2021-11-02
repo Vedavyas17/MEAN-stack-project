@@ -1,0 +1,66 @@
+<!-- <p>paying works!</p> -->
+<!-- <p>enquire works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="logo"><img class="img"
+      src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+      alt="KAAR"></div>
+
+  <div class="nav-links">
+    <li class="h5"><a routerLink="/invoice" routerLinkActive='active'>Invoice</a></li>
+    <li class="h5"><a routerLink="/credit" routerLinkActive='active'>Credit & Debit memo</a></li>
+    <!-- <li class="h5"><a routerLink="/mmboard/com3" routerLinkActive='active'></a></li> -->
+    <li class="h5"><a routerLink="/dashboard">Back</a></li>
+    <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/vendor" style="color: #fff;">Logout</a></button></li>
+  </div>
+
+</nav>
+<div></div>
+<div class="main--bgc pb-5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+    <path fill="#f8f9fa" fill-opacity="1"
+      d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+    </path>
+  </svg>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<table class="table  table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th>CUSTOMER</th>
+            <th>COMP_CODE</th>
+            <th>BLINE_DATE</th>
+            <th>DOC_TYPE</th>
+            <th>FISC_YEAR</th>
+            <th>ALLOC_NMBR</th>
+            <th>DISC_BASE</th>
+            <th>DOC_DATE</th>
+            <th>ITEM_NO</th>
+            <!-- <th>LOC_CURRCY</th> -->
+            <!-- <th>OBJ_TYPE</th> -->
+            <!-- <th>REF_DOC</th> -->
+        </tr>
+    </thead>
+    <tbody class="table-active">
+        <tr *ngFor="let item of payAging | slice:1 ">
+            <td>{{item.CUSTOMER}}</td>
+            <td>{{item.COMP_CODE}}</td>
+            <td>{{item.BLINE_DATE}}</td>
+            <td>{{item.DOC_TYPE}}</td>
+            <td>{{item.FISC_YEAR}}</td>
+            <td>{{item.ALLOC_NMBR}}</td>
+            <td>{{item.DISC_BASE}}</td>
+            <td>{{item.DOC_DATE}}</td>
+            <td>{{item.ITEM_NUM}}</td>
+            <!-- <td>{{item.LOC_CURRCY}}</td> -->
+            <!-- <td>{{item.OBJ_TYPE}}</td> -->
+            <!-- <td>{{item.REF_DOC}}</td> -->
+        </tr>
+    </tbody>
+</table>
+

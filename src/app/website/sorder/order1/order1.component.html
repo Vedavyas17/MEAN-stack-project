@@ -1,0 +1,21 @@
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<table class="table table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+        </tr>
+    </thead>
+    <tbody class="table-active">
+        <tr *ngFor="let item of saleOrder">
+            <td>{{item.NAME}}</td>
+            <td>{{item.MATERIAL}}</td>
+            <td>{{item.ITM_NUMBER}}</td>
+            <td>{{item.NET_PRICE}}</td>
+        </tr>
+    </tbody>
+</table>

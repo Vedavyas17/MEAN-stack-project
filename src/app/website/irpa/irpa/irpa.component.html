@@ -1,0 +1,82 @@
+<!-- <p>irpa works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img
+                src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+                alt="logo" class="logo" loading="lazy"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto font-weight-bold small">
+                <li class="nav-item  ">
+                    <h3><a class="nav-link active h5" aria-current="page" href="#"  routerLink="/start">Back</a></h3>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <h3><a class="nav-link h5" href="#" routerLink="/home">Home</a></h3>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="logo" ><img
+        src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+        alt="KAAR" class="img"></div>
+
+    <div class="nav-links">
+        <li class="h5"><a routerLink="/my">Profile</a></li>
+      <!-- <li><a href="#"></a></li> -->
+      <li class="h5"><a href="#" routerLink="/start">Back</a></li>
+      <!-- <li><a href="#"></a></li> -->
+      <!-- <li class="h5"><a href="#" routerLink="/home">Home</a></li> -->
+      <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/signin" style="color: #fff;">Logout</a></button></li>
+    </div>
+
+  </nav>
+<div></div>
+<div class="main--bgc pb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+        <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+    </svg>
+<div class="total">
+<p id="title">Intelligent RPA</p>
+<img src="assets/irpa1.png" alt="" class="ab">
+<div class="center h5">
+    <h2 style="font-weight: 480;">Excel created by the bot :</h2>
+    <p>This dataset contains Invoice related fields like salesDocNum, CreatedOn, CreatedBy, Pricing and volume related Content.
+    </p>
+    <p>Download the Obtained DataSheet :<a target="_self" href="assets/customermasterdataupload.xlsx"
+            download="customermasterdataupload.xlsx"><button id="button" style="border: 2px solid rgb(245, 244, 241);background-color: rgb(255, 0, 191);border-radius: 15px;padding: 10px;">Customer_masterdata_File</button></a>
+            <!--<a target="_self" href="assets/ml.csv"
+            download="ml.csv">-->
+
+    </p>
+</div></div>
+<div class="total">
+    <h1 style="font-weight: 480;">The below Video will be showing the bot fetching the invoice details :</h1>
+    <!-- <video width="400" height="300" style="padding-right: 40%;" controls>
+        <source src="../../../../assets/irpainvoice.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+    <video width="600" height="410" controls >
+        <source src="../../../../assets/irpainvoice2.mp4" type="video/mp4" style="margin-left: 80%;">
+        Your browser does not support the video tag.
+    </video>
+</div>

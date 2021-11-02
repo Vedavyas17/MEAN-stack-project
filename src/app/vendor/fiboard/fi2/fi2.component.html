@@ -1,0 +1,76 @@
+<!-- <p>fi2 works!</p> -->
+<!-- <p>com1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="logo"><img class="img"
+      src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+      alt="KAAR"></div>
+
+  <div class="nav-links">
+    <!-- <li class="h5"><a routerLink="/fiboard/fi1" routerLinkActive='active'></a></li> -->
+    <li class="h5"><a routerLink="/fiboard/fi1" routerLinkActive='active'>Invoice</a></li>
+    <li class="h5"><a routerLink="/fiboard/fi3" routerLinkActive='active'>Credit/Debit memo</a></li>
+    <li class="h5"><a routerLink="/fiboard">Back</a></li>
+    <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/vendor" style="color: #fff;">Logout</a></button></li>
+  </div>
+
+</nav>
+<div></div>
+<div class="main--bgc pb-5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+    <path fill="#f8f9fa" fill-opacity="1"
+      d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+    </path>
+  </svg>
+</div>
+
+<!-- <p>comp2 works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<!-- <div *ngIf="default">  <button class="h5" style="border: 2px solid blue;padding:5px" *ngIf="def" (click)="clickMe()">SA01</button>
+<button class="h5"  style="border: 2px solid blue;padding:5px" *ngIf="def" (click)="clickIt()">R001</button></div> -->
+
+    <table class="table table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;">
+            <!--<th>VENDOR</th>
+            <th>DOC_NO</th>
+            <th>BLINE_DATE</th>
+            <th>COMP_CODE</th>
+            <th>ITEM_NUM</th>
+            <th>DOC_TYPE</th>
+            <th>FISC_YEAR</th>
+            <th>AMOUNT</th>
+            <th>DOC_STATUS</th>-->
+        </tr>
+    </thead>
+    <tbody class="table-active" style="font-size: 18px;">
+      <tr class="bg-info" style="color:#fff;font-size: 18px;">
+        <td>VENDOR</td>
+        <td>DOC_NO</td>
+        <td>BLINE_DATE</td>
+        <td>COMP_CODE</td>
+        <td>ITEM_NUM</td>
+        <td>DOC_TYPE</td>
+        <td>FISC_YEAR</td>
+        <td>AMOUNT</td>
+        <td>DOC_STATUS</td>
+    </tr>
+        <tr *ngFor="let item of payage | slice:1">
+            <td>{{item.VENDOR}}</td>
+            <td>{{item.DOC_NO}}</td>
+            <td>{{item.BLINE_DATE}}</td>
+            <td>{{item.COMP_CODE}}</td>
+            <td>{{item.ITEM_NUM}}</td>
+            <td>{{item.DOC_TYPE}}</td>
+            <td>{{item.FISC_YEAR}}</td>
+            <td>{{item.AMT_DOCCUR}}</td>
+            <td>{{item.DB_CR_IND}}</td>
+        </tr>
+    </tbody>
+</table>
+

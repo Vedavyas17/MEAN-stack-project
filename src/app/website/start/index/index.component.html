@@ -1,0 +1,182 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img
+                src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+                alt="logo" class="logo" loading="lazy"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto font-weight-bold small">
+                <li class="nav-item  ">
+                    <h3><a class="nav-link active h5" aria-current="page" href="#"  routerLink="/signin">Back</a></h3>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <h3><a class="nav-link h5" href="#" routerLink="/home">Home</a></h3>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="logo" ><img
+        src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+        alt="KAAR"></div>
+
+    <div class="nav-links">
+        <li class="h5"><a href="#" routerLink="/home">Home</a></li>
+        <!-- <li><a href="#"></a></li>  -->
+      <li class="h5"><a routerLink="/debit">Customer Profile</a></li> 
+      <!-- <li><a href="#"></a></li> -->
+      <li class="h5"><a href="#" routerLink="/signin">Back</a></li>
+      <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;color: #fff;" (click)="onClick()"><a href="http://localhost:4200/signin" style="color: #fff;">Logout</a></button></li>
+      
+      
+    </div>
+
+  </nav>
+<div></div>
+<div class="main--bgc pb-5">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+        <path fill="#f8f9fa" fill-opacity="1"
+            d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+    </svg>
+
+    <div class="container container--title ">
+        <div class="row min-vh-75">
+            <div class="col text-center mt-5 mb-5">
+                <h1 class="mb-4">Customer Portal</h1>
+                <p class="h5">The objective of the customer portal is to understand the functionalities of Sales and
+                    Distribution(SD) and Finance (FI) module. This portal is to be designed for maintaining the data of all the
+                    customers carrying out business with the organization. The need of Customer portal is to access
+                    and view the complete transaction between the company and customer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="total">
+        <h1>Portal Features</h1>
+        <div class="wrapper">
+            <div class="card">
+                <h3 class="card-title">Customer Dashboard</h3>
+                <!-- <img src="assets/dash.jpg" alt="Customer-dashboard" class="pic"> -->
+                <p class="card-content">The customer dashboard needs to be designed and developed to have the end to end
+                    transactions between logon customer and the company.</p>
+                <button class="card-btn" routerLink="/dashboard">READ MORE</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Finance</h3>
+                <!-- <img src="assets/finance.jpg" alt="financial-Sheet" class="pic"> -->
+                <p class="card-content">The customer financial sheet need to have a complete financial transaction
+                    between
+                    the customer and the company.</p>
+                <button class="card-btn" routerLink="/finance">READ MORE</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Intelligent RPA</h3>
+                <!-- <img src="assets/ml.jpeg" alt="IRPA" class="pic"> -->
+                <p class="card-content">Invoice details has to be developed using SAP iRPA/Automation
+                    anywhere/Uipath.Invoice is a document which holds the amount to be paid back to the vendor. The
+                    amount in the invoice would be entered against the purchase order in the incoming
+                    invoice transaction. This amount would be verified against the goods received and the
+                    price in the purchase order</p>
+                <button  [routerLink]="'/irpa'" class="card-btn">READ MORE</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Data Visualization</h3>
+                <!-- <img src="assets/ml2.jpg" alt="Data Visualization" class="pic"> -->
+                <p class="card-content">The overall sales data has to be predicted using Machine Learnings algorithms.
+                    Dataset will be given, once predicting the overall sales happened during the fiscal
+                    year, it has to be fetched and consumed in angular app</p>
+                <button class="card-btn" routerLink="/visual">READ MORE</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Master Data Upload</h3>
+                <!-- <img src="assets/data.jpg" alt="Data-Upload" class="pic"> -->
+                <p class="card-content">Using file to RFC/IDOC scenario to upload customer master data.</p>
+                <button class="card-btn" routerLink="/file">READ MORE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="total1">
+    <footer class="footer">
+
+        <div class="footer-text">
+            <div>
+                <h4>Benefits at Kaar</h4>
+                <p>
+                    At Kaar you don’t just do a job but build a career. The core of the company lies in the potential of
+                    the employees that we attract and retain.
+                </p>
+            </div>
+            <div>
+                <h4>Life at Kaar</h4>
+                <p>
+                    Kaar offers a great work life balance to motivate and nurture employees, while promoting holistic
+                    growth.
+                </p>
+            </div>
+            <div>
+                <h4>Jobs at Kaar</h4>
+                <p>
+                    We are always on the lookout for people with great talent and passion for their work. Explore an
+                    array of career opportunities for your profile with us.
+                </p>
+            </div>
+        </div>
+
+        <h4>© Kaar Technologies 2021.Our Privacy Policy may change from time to time and all updates will be posted on
+            this page.</h4>
+
+    </footer>
+</div> -->
+<div class="total1">
+  <footer class="footer">
+
+    <div class="footer-text">
+      <div>
+        <h4>Portal's vision</h4>
+        <p>
+          The main vision of this portal development is to make oneself gain business level
+          understanding of the SAP core functional modules and to become full stack techno functional
+          consultant. One should design an SAP ERP Portal for a particular organisation which is a user-friendly
+          portal.
+        </p>
+      </div>
+      <div>
+        <h4>Life at Kaar</h4>
+        <p>
+          Kaar offers a great work life balance to motivate and nurture employees, while promoting holistic
+          growth.
+        </p>
+      </div>
+      <div>
+        <h4>Mission at Kaar</h4>
+        <p>
+          To remain a socially responsible corporate entity, which will instill a sense of pride, joy and
+          accomplishment, in every facet of its interaction, to everyone associated, be it the employees, customers,
+          vendors or stakeholders.
+        </p>
+      </div>
+    </div>
+
+    <h4>© Kaar Technologies 2021.Our Privacy Policy may change from time to time and all updates will be posted on
+      this page.</h4>
+
+  </footer>
+</div>

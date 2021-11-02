@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.total {
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.45);
+    background-color: #EEF1FC;
+}
+
+.body{
+  height: 130vh;
+  width: 80%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: -41%;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 700px;
+  width: 80%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  /* text-align: center; */
+  border: 2px solid brown;
+  padding-left: 45px;
+  padding-top: 15px;
+  /* height: 160px; */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+form .input-box div.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+ .item{
+     border:2px solid #9b59b6 ;
+     padding: 5px;
+     border-radius: 10px;
+     display: inline;
+     /* margin-bottom: 10px; */
+ }
+ .start{
+   overflow: hidden;
+   height: 650px;
+   width: 30%;
+   font-size: 18px;
+   float: left;
+   overflow-y: scroll;
+   overflow-x: scroll;
+ }
+   /* #start1{
+   width: 50%;
+   margin-right: 35%;
+ }  */
+ button:hover{
+   background-color: rgb(96, 243, 96);
+ }
+ .para{
+     margin-top: 35px;
+     margin-bottom: 3px;
+ }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}

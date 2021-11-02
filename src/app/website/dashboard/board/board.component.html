@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="logo"><img
+      src="https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/04c7b348b02d2c82bf60"
+      alt="KAAR"></div>
+
+  <div class="nav-links">
+    <li class="h5"><a routerLink="/dashboard/comp1" routerLinkActive='active'>Inquiry</a></li>
+    <li class="h5"><a routerLink="/dashboard/comp2" routerLinkActive='active'>Sale order</a></li>
+    <li class="h5"><a routerLink="/dashboard/comp3" routerLinkActive='active'>Delivery</a></li>
+    <li class="h5"><a routerLink="/start">Back</a></li>
+    <li class="h5" style="margin-top: -2%;"><button class="btn btn-danger" style="border-radius: 20px;" (click)="onClick()"><a href="http://localhost:4200/signin" style="color: #fff;">Logout</a></button></li>
+  </div>
+
+</nav>
+<div></div>
+<div class="main--bgc pb-5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1440 85">
+    <path fill="#f8f9fa" fill-opacity="1"
+      d="M0,224L60,224C120,224,240,224,360,213.3C480,203,600,181,720,181.3C840,181,960,203,1080,197.3C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+    </path>
+  </svg>
+
+
+  <div id="default" class="total">
+    <h1 class="mb-4" style="color: #597FE2;text-decoration: underline;">Customer Sales Data </h1>
+    <ul>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">Inquiry Data</p>
+        <p>Inquiry data contains all the inquiries made by the customer from multiple vendors</p>
+      </li>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">Sales Order Data</p>
+        <p>All the sales orders placed by the customer will be available in this page</p>
+      </li>
+      <li class="h5">
+        <p style="color:crimson;text-align:inherit;">List of Delivery</p>
+        <p>The delivery status of all the orders that have been placed will be in this page</p>
+      </li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- <div id="inquiry" *ngIf="inquiry" style="text-align:center">
+    <p>inquiry data goes here........</p>
+  </div>
+  <div id="salesorderdata" *ngIf="salesorderdata" style="text-align:center">
+    <p>sales order data goes here....</p>
+  </div>
+  <div id="listofdelivery" *ngIf="listofdelivery" style="text-align:center">
+    <p>list of delivery data goes here.....</p>
+  </div> -->

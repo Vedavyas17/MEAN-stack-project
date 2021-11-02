@@ -1,0 +1,43 @@
+<div style="background-color: #eef1fc;"><button routerLink="/home"style="padding:8px;border-radius:15px;font-size:18px;" class="abc">Home</button></div>
+<section id="total">
+    <div class="imgBx">
+        <!-- <img src="assets/bg1.jpg" alt="kaar"> -->
+        <img src="assets/bggg.jpg" alt="">
+    </div>
+    <div class="contentBx">
+        <div class="formBx">
+            <img src="https://www.kaartech.com/wp-content/themes/kaar/images/logo.png" alt="">
+            <div>
+            </div>
+            <h2 >Customer Portal Login</h2>
+            <form>
+                <div class="inputBx">
+                    <span>Username</span>
+                    <input type="text" name="username" [(ngModel)]="username" >
+                </div>
+                <div class="inputBx">
+                    <span>Password</span>
+                    <input type="password" name="password" [(ngModel)]="password" >
+                    <p style="color: darkred;font-weight: 400;">{{error}}</p>
+                </div>
+                
+                <!-- <div class="remember">
+                    <p style="color: darkred;font-weight: 300;">{{error}}</p> 
+                    <label><input type="checkbox">Remember me</label>
+                </div> -->
+                <div class="inputBx">
+                    
+                    <button type="submit" (click)="submit2()">Sign-IN</button>
+                    <p>© Kaar Technologies 2021.Our Privacy Policy may change from time to time and all updates will be
+                        posted on this page.</p>
+                </div>
+            </form>
+            <!-- <h3>Login with social-media</h3> -->
+            <!-- <ul class="sci">
+                <li><img src="assets/fb2.png"></li>
+                <li><img src="assets/twitter1.png"></li>
+                <li><img src="assets/linkedin.png"></li>
+            </ul> -->
+        </div>
+    </div>
+</section>

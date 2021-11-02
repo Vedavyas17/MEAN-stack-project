@@ -1,0 +1,37 @@
+<!-- <p>comp2 works!</p> -->
+<!-- <p>order1 works!</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<!-- <div *ngIf="default">  <button class="h5" style="border: 2px solid blue;padding:5px" *ngIf="def" (click)="clickMe()">SA01</button>
+<button class="h5"  style="border: 2px solid blue;padding:5px" *ngIf="def" (click)="clickIt()">R001</button></div> -->
+
+    <table class="table table-bordered table-responsive total">
+    <thead class="bg-info">
+        <tr style="color:#fff;font-size: 18px;">
+            <th>NAME</th>
+            <th>MATERIAL</th>
+            <th>ITM_NUMBER</th>
+            <th>REQ_QTY</th>
+            <th>NET_PRICE</th>
+            <th>REQ_DATE</th>
+            <th>PURCH_NO</th>
+            <th>SOLD_TO</th>
+            <th>DOC_STATUS</th>
+        </tr>
+    </thead>
+    <tbody class="table-active" style="font-size: 18px;">
+        <tr *ngFor="let item of saleOrder">
+            <td>{{item.NAME}}</td>
+            <td>{{item.MATERIAL}}</td>
+            <td>{{item.ITM_NUMBER}}</td>
+            <td>{{item.REQ_QTY}}</td>
+            <td>{{item.NET_PRICE}}</td>
+            <td>{{item.REQ_DATE}}</td>
+            <td>{{item.PURCH_NO}}</td>
+            <td>{{item.SOLD_TO}}</td>
+            <td>{{item.DOC_STATUS}}</td>
+        </tr>
+    </tbody>
+</table>
+

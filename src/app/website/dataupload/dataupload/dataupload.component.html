@@ -1,0 +1,45 @@
+<!-- <p>dataupload works!</p> -->
+<div class="mainContainer">
+    <div class="content">
+        <h1 id="title"> Customer Master Data Upload</h1>
+        <div class="center">
+            <h2>Steps to upload customer data :</h2>
+            <ul>
+                <li>Upload file in excel format</li>
+                <li>Wait few seconds for the file to be processed</li>
+                <li>Check the newly created customer.</li>
+            </ul>
+            
+        </div>
+        <div id="p1">
+        <div class="row margin25">
+
+            <div class="col-md-4">
+
+                <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+<button type="button" class="btn btn-info" (click)="Upload2()" >Upload</button>
+            </div>
+            <!--<div class="col-md-4">
+                <div class="input-group">
+    
+                    <div class="input-group-prepend">
+                        <span class="input-group-text upload" (click)="upload()" id="btnUpload">Upload</span>
+                    </div> -->
+                    <!-- <div class="custom-file">
+                        <form action="/api/upload" method="post" enctype="multipart/form-data">
+                            <input (change)="fileChange($event)" type="file" class="custom-file-input"
+                                id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        </form> -->
+                        <!-- <label class="custom-file-label" for="inputGroupFile01">Choose file</label> 
+                    </div>
+                </div>
+            </div>-->
+            <!-- <div class="col-md-4">
+
+            </div> -->
+        </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="padding"></div> -->
+
